@@ -9,9 +9,7 @@ allow recovery unlabeled:filesystem mount;
 
 # But the allow rules are only included in the recovery policy.
 # Otherwise recovery is only allowed the domain rules.
-recovery_only(`
   permissive recovery;
- ')
 
 allow recovery self:process execmem;
 allow recovery ashmem_device:chr_file execute;
